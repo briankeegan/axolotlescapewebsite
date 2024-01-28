@@ -4,6 +4,8 @@ body { padding: 0; margin: 0; display: flex; flex-direction: column; align-items
 .explanation .hide-mobile { display: none }
 .explanation-mobile{ display: flex; flex-direction: column; padding: 10px; }
 .explanation-mobile .hide-mobile { display: none }
+.explanation .mobile-ios { display: none }
+.explanation-mobile .mobile-ios { display: none }
 .lazy-divider { width: 200px }
 #unity-container.unity-desktop { padding-top: 450px; left: 50%; top: 50%; transform: translate(-50%, -50%) }
 #unity-container.unity-mobile { position: relative; width: 100%; height: 50%; bottom: 0 }
