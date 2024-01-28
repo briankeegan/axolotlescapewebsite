@@ -9,6 +9,11 @@ body { padding: 0; margin: 0; display: flex; flex-direction: column; align-items
 #unity-container.unity-mobile { position: relative; width: 100%; height: 50%; bottom: 0 }
 #unity-canvas { background: #231F20 } 
 .unity-mobile #unity-canvas { width: 100%; height: 50%; }
+/* Full screen mobile IOS */
+#unity-container.unity-mobile-ios { position: fixed; width: 100%; height: 100% }
+.unity-mobile-ios #unity-canvas { width: 100%; height: 100%; }
+.unity-mobile-ios #unity-footer { display: none }
+
 #unity-loading-bar {padding-top: 450px;  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
 #unity-logo { width: 154px; height: 130px; background: url('unity-logo-dark.png') no-repeat center }
 #unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; margin-left: 6.5px; background: url('progress-bar-empty-dark.png') no-repeat center }

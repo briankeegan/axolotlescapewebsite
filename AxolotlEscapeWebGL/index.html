@@ -123,6 +123,26 @@
         canvas.style.width = "960px";
         canvas.style.height = "600px";
       }
+      if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+        // window.innerHeight < window.innerWidth
+        // add event listner for orientation change
+        if (window.orientation == 90 || window.orientation == -90) {
+          // Landscape
+          container.className = "unity-mobile-ios";
+        } 
+        window.addEventListener("orientationchange", function() {
+          // Announce the new orientation number
+          if (window.orientation == 90 || window.orientation == -90) {
+            // Landscape
+            container.className = "unity-mobile-ios";
+          } else {
+            // Portrait
+            container.className = "unity-mobile";
+          }
+        }, false);
+      }
+
+
 
       loadingBar.style.display = "block";
 
