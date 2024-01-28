@@ -8,15 +8,14 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-  <div class="explanation">
-    <div>
-
-      <h1>Axolotl Escape</h1>
+      <div class="explanation">
+        <h1>Axolotl Escape</h1>
         <p>A game by Jack Murdoch and Brian Keegan</p>
         <p>⚠️⚠️⚠️WIP d⚠️⚠️⚠️ It's incomplete and there are many known issues...</p>
-        <p>On Mobile, for on screen controls click the left hand corner of the screen.</p>
-        <p><i>"There are a few thing that need to be fixed, but then it will PERFECT"</i></p>
-        <p> ~ Anonymous player/creator</p>
+        <p>Touch top left corner toggle onscreen controls.</p>
+        <p classs="hide-desktop">Horizontal fullscreen is the way to go!</p>
+        <p class="hide-mobile"><i>"There are a few thing that need to be fixed, but then it will PERFECT"</i></p>
+        <p class="hide-mobile"> ~ Anonymous player/creator</p>
       </div>
       <div class="lazy-divider"></div>
       <div>
@@ -50,6 +49,7 @@
     <script>
 
       var container = document.querySelector("#unity-container");
+      var explanation = document.querySelector(".explanation");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
@@ -109,6 +109,8 @@
         document.getElementsByTagName('head')[0].appendChild(meta);
         container.className = "unity-mobile";
         canvas.className = "unity-mobile";
+
+        explanation.className = "explanation-mobile";
 
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
